@@ -14,18 +14,21 @@
         <h2>Vacation Contest Sign-Up Form</h2>
         <form method="GET" action="results.html"> <!-- TODO: Set Action and Method Properties -->
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <label for="firstname">Your First Name</label><span class="requiered-field">*</span>
+                <input type="text" id="firstname" name="firstname" required minlength="2" maxlength="35">
                 <!-- TODO: Create a "lastname" input with type "text" -->
-                <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <label for="lastname">Your Last Name</label><span class="requiered-field">*</span>
+                <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="35">
+                <label for="age">Your Age</label><span class="requiered-field">*</span>
+                <input type="number" id="age" name="age" min="21" max="120" required>
+                <h1><em>You must be age 21 or older to enter the contest</em></h1>
 
             </div>
             <!-- TODO: Make fieldset and legend -->
             <fieldset> 
                 <legend><strong>Your Contact Info</strong> </legend>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
+                <label for="email">Email</label><span class="requiered-field">*</span>
+                <input type="email" id="email" name="email" required>
                 <label for="address">Street Adress</label>
                 <input type="text" id="address" name="address">
                 <label for="city">City</label>
@@ -86,7 +89,7 @@
                 </select>
                 
                 <label for="zip">Zip Code</label>
-                <input type="text" id="zip" name="zip">
+                <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-digit US Zip Code">
 
             </fieldset>
             <!-- Todo: Email Input -->
